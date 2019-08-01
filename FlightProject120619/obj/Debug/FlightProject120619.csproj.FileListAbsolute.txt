@@ -1,0 +1,6 @@
+C:\Users\USER\source\repos\FlightProject120619\FlightProject120619\bin\Debug\FlightProject120619.dll
+C:\Users\USER\source\repos\FlightProject120619\FlightProject120619\bin\Debug\FlightProject120619.pdb
+C:\Users\USER\source\repos\FlightProject120619\FlightProject120619\obj\Debug\FlightProject120619.csprojAssemblyReference.cache
+C:\Users\USER\source\repos\FlightProject120619\FlightProject120619\obj\Debug\FlightProject120619.csproj.CoreCompileInputs.cache
+C:\Users\USER\source\repos\FlightProject120619\FlightProject120619\obj\Debug\FlightProject120619.dll
+C:\Users\USER\source\repos\FlightProject120619\FlightProject120619\obj\Debug\FlightProject120619.pdb

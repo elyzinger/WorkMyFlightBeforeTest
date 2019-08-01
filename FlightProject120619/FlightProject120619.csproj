@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E025F32D-1BF8-4D64-97DA-807F09226955}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FlightProject120619</RootNamespace>
+    <AssemblyName>FlightProject120619</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Administrator.cs" />
+    <Compile Include="DAO\AirlineDAOMSSQL.cs" />
+    <Compile Include="DAO\CountryDAOMSSQL.cs" />
+    <Compile Include="DAO\CustomerDAOMSSQL.cs" />
+    <Compile Include="FACADE\AnonymousUserFacade.cs" />
+    <Compile Include="FACADE\FacadeBase.cs" />
+    <Compile Include="FACADE\interfaces\IAnonymousUserFacade.cs" />
+    <Compile Include="FACADE\interfaces\ILoggedInAdministratorFacade.cs" />
+    <Compile Include="FACADE\interfaces\ILoggedInAirlineFacade.cs" />
+    <Compile Include="FACADE\interfaces\ILoggedInCustomerFacade.cs" />
+    <Compile Include="FACADE\LoggedInAdministratorFacade.cs" />
+    <Compile Include="FACADE\LoggedInAirlineFacade.cs" />
+    <Compile Include="FACADE\LoggedInCustomerFacade.cs" />
+    <Compile Include="EXCEPTION\NoMoreTicketsException.cs" />
+    <Compile Include="FlightCenterConfig.cs" />
+    <Compile Include="DAO\interfaces\IAirlineDAO.cs" />
+    <Compile Include="DAO\interfaces\IBasicDB.cs" />
+    <Compile Include="DAO\interfaces\ICountryDAO.cs" />
+    <Compile Include="DAO\interfaces\ICustomerDAO.cs" />
+    <Compile Include="DAO\interfaces\IFlightDAO.cs" />
+    <Compile Include="DAO\interfaces\ITicketDAO.cs" />
+    <Compile Include="DAO\FlightDAOMSSQL.cs" />
+    <Compile Include="FlyingCenterSystem.cs" />
+    <Compile Include="FACADE\interfaces\IFacade.cs" />
+    <Compile Include="LOGIN\ILoginToken.cs" />
+    <Compile Include="POCO\AirLineCompany.cs" />
+    <Compile Include="POCO\Country.cs" />
+    <Compile Include="POCO\Customer.cs" />
+    <Compile Include="POCO\Flight.cs" />
+    <Compile Include="LOGIN\ILoginService.cs" />
+    <Compile Include="POCO\interfaces\IPoco.cs" />
+    <Compile Include="POCO\interfaces\IUser.cs" />
+    <Compile Include="LOGIN\LoginService.cs" />
+    <Compile Include="LOGIN\LoginToken.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="POCO\Ticket.cs" />
+    <Compile Include="DAO\TicketDAOMSSQL.cs" />
+    <Compile Include="EXCEPTION\UserNotFoundException.cs" />
+    <Compile Include="EXCEPTION\WrongPasswordException.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
